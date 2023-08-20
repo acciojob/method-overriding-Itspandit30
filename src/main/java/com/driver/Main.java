@@ -2,7 +2,7 @@ package com.driver;
 
 public class Main {
 
-    public class A {
+    public static class A {
 
         public String meth() {
             return "Invoking method from class A";
@@ -10,7 +10,7 @@ public class Main {
 
     }
 
-    public class B extends A {
+    public static class B extends A {
 
         @Override
         public String meth() {
@@ -19,8 +19,13 @@ public class Main {
 
     }
 
-    B obj1 = new B();
+    public static void main(String[] args) {
 
-    B onj2 = new B();
-  
+        B obj1 = new B();
+        obj1.meth();
+
+        B obj2 = new B();
+        obj2.meth();
+
+    }
 }
